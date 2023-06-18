@@ -2,3 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+.timeline-wrapper {
+    /* Establece un ancho fijo para el contenedor de la línea de tiempo */
+    max-width: 760px;
+    min-width: 350; /* Cambia esto al tamaño que quieras */
+    position: relative;
+    padding: 1rem;
+}
+
+
+
+.timeline-item {
+    /* Mantén cada elemento de la línea de tiempo en la misma línea */
+    display: inline-flex;
+    align-items: center;
+    /* Añade algo de espacio alrededor de cada elemento */
+    padding: 2rem;
+}
+.timeline-item:before {
+    /* Este es el pseudo-elemento que creará la línea del tiempo */
+    content: '';
+    position: absolute;
+    top: 40%;
+    width: 85%;
+    height: 2px;
+    background: black;
+}
+
+
+.point {
+    /* Estiliza tu punto de la línea de tiempo como prefieras */
+    
+    /* Asegúrate de que hay espacio entre el punto y el contenido */
+    z-index: 1;
+}
+
+.content {
+    padding: 1.3em;
+    /* Aquí puedes estilizar tu contenido como quieras */
+}

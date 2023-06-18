@@ -1,5 +1,6 @@
 import { Experience } from "./Expereincie";
 import Experiences from "./Experiences";
+import Formaciones from "./Formaciones";
 import Logos from "./Logos";
 const FrontPage = () => {
   return (
@@ -19,6 +20,7 @@ const FrontPage = () => {
       </section>
 
       <Experiences/>
+      <Formaciones/> 
     </>
   );
 };
