@@ -23,8 +23,8 @@
     /* Este es el pseudo-elemento que creará la línea del tiempo */
     content: '';
     position: absolute;
-    top: 40%;
-    width: 85%;
+    top: 138px;
+    width: 100%;
     height: 2px;
     background: black;
 }

@@ -9,3 +9,10 @@ export interface ExperienceType {
     tec: string[]
     children?: ReactNode;
     }
+
+export interface FormacionPropsType{
+    logo: StaticImageData
+    ttl:string
+    children:ReactNode
+    mt?:number
+}
