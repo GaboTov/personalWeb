@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .timeline-wrapper {
-    /* Establece un ancho fijo para el contenedor de la línea de tiempo */
-    max-width: 760px;
-    min-width: 350; /* Cambia esto al tamaño que quieras */
+    
+    max-width: 95vw;
+    height: 500px;
     position: relative;
     padding: 1rem;
 }
@@ -13,19 +13,16 @@
 
 
 .timeline-item {
-    /* Mantén cada elemento de la línea de tiempo en la misma línea */
-    display: inline-flex;
     align-items: center;
-    /* Añade algo de espacio alrededor de cada elemento */
     padding: 2rem;
 }
 .timeline-item:before {
-    /* Este es el pseudo-elemento que creará la línea del tiempo */
+    
     content: '';
     position: absolute;
-    top: 138px;
+    top: 152px;
     width: 100%;
-    height: 2px;
+    height: 1px;
     background: black;
 }
 
@@ -40,4 +37,21 @@
 .content {
     padding: 1.3em;
     /* Aquí puedes estilizar tu contenido como quieras */
+    @apply
+    text-[20px]
 }
+.yearStudy{
+    @apply 
+    m-3
+    text-gray-400
+    
+}
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  

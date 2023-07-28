@@ -7,8 +7,8 @@ const Formacion = ({logo,ttl, children, mt}:FormacionPropsType) => {
     return(
         <>
         
-        <div className="timeline-item flex flex-col items-center ">
-          <div className="content">{ttl}</div>
+        <div className="timeline-item flex flex-col items-center min-w-[280px] ">
+          <div className="content whitespace-nowrap">{ttl}</div>
           <div className={` point flex bg-white p-2 w-[3em] h-[3em] rounded-full mt-${mt}`}>
             <Image
               src={logo}

@@ -13,7 +13,7 @@ const FrontPage = () => {
         />
         <div className="px-4">
           <p className="text-3xl">Gabo Tovar</p>
-          <p className="text-xs">FullStack Developer | Ambientologo</p>
+          <p className="text-xs">FullStack Developer | Científico ambiental</p>
         </div>
 
         <Logos />
@@ -21,6 +21,9 @@ const FrontPage = () => {
 
       <Experiences/>
       <Formaciones/> 
+      <footer className="mt-[500px]">
+        Aca va el footer
+      </footer>
     </>
   );
 };
