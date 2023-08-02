@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 .timeline-wrapper {
-    
-    max-width: 95vw;
+    max-width: 70vw;
     height: 500px;
     position: relative;
     padding: 1rem;
@@ -21,7 +20,7 @@
     content: '';
     position: absolute;
     top: 152px;
-    width: 100%;
+    width: 340px;
     height: 1px;
     background: black;
 }
@@ -53,5 +52,15 @@
   .hide-scrollbar {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+  }
+  
+  .overflow-x-scroll {
+    overflow-x: auto;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+  
+  .overflow-x-scroll::-webkit-scrollbar {
+    width: 0px; /* For Chrome, Safari, and Opera */
   }
   

@@ -11,8 +11,9 @@ export interface ExperienceType {
     }
 
 export interface FormacionPropsType{
-    logo: StaticImageData
+    logo: string[]
     ttl:string
-    children:ReactNode
-    mt?:number
+    mt?:number //modify logo
+    year:number
+    explain:string
 }

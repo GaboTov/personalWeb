@@ -9,12 +9,12 @@ const Experiences = () => {
 
 
     return(
-         <section className="flex-column">
+         <section className="flex-column w-auto">
         <div>
 
         <h1 className="text-2xl py-10 ">Experiencia</h1>
         </div>
-        <div className="flex flex-row flex-wrap  max-w-[1100px] justify-center">
+        <div className="flex flex-row flex-wrap  w-auto justify-center">
           <Experience
             title="Tudestino Sostenible"
             img={logoTudesos}
@@ -23,8 +23,9 @@ const Experiences = () => {
             tec={["React", "post", "Django", "Py"]}
           >
             Contribución al desarrollo de una aplicación web que evalúa la
-            sostenibilidad de establecimientos. Responsabilidades incluyeron la
-            creación de la primera versión, diseño de algoritmo, desarrollo de
+            sostenibilidad en el sector turístico. 
+            Responsabilidades incluyeron la
+            creación de la primera versión, diseño de algoritmo de calificación, desarrollo de
             APIs, implementación de API de Stripe y automatización de
             visualización de datos e informes
           </Experience>
