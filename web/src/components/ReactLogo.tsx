@@ -3,6 +3,12 @@ import Image from "next/image";
 import djangoLogo from "../utilis/images/django-logo-positive.png";
 import tsLogo from "../utilis/images/ts-logo-256.png";
 import postLogo from "../utilis/images/Postgresql_elephant.svg.png";
+import HTMLLogoSrc from "../utilis/images/html5Logo.png";
+import CSSLogoSrc from "../utilis/images/CSSLogo.png";
+import JsLogoSrc from "../utilis/images/JavaScript-logo.png";
+import cienciaLogoSrc from "../utilis/images/logoCiencia.png";
+import DockerLogoSrc from "../utilis/images/dockerLogo.webp";
+import emprenderLogoSrc  from "../utilis/images/empredimientoLogo.png"
 interface LogoPropType {
   h: number;
   w: number;
@@ -94,6 +100,81 @@ export function PostSQLLogo(props: LogoPropType) {
         height={props.h}
         src={postLogo}
         alt={"PostgreSQL Logo"}
+      />
+    </div>
+  );
+}
+
+export function HTMLLogo(props: LogoPropType) {
+  return (
+    <div>
+      <Image
+        width={props.w}
+        height={props.h}
+        src={HTMLLogoSrc}
+        alt={"HTML Logo"}
+      />
+    </div>
+  );
+}
+
+export function CSSLogo(props: LogoPropType) {
+  return (
+    <div>
+      <Image
+        width={props.w}
+        height={props.h}
+        src={CSSLogoSrc}
+        alt={"CSS Logo"}
+      />
+    </div>
+  );
+}
+export function JsLogo(props: LogoPropType) {
+  return (
+    <div>
+      <Image
+        width={props.w}
+        height={props.h}
+        src={JsLogoSrc}
+        alt={"JavaScript Logo"}
+      />
+    </div>
+  );
+}
+export function CienciaLogo(props: LogoPropType) {
+  return (
+    <div>
+      <Image
+        width={props.w}
+        height={props.h}
+        src={cienciaLogoSrc}
+        alt={"Logo de ciencia"}
+      />
+    </div>
+  );
+}
+
+export function DockerLogo(props: LogoPropType) {
+  return (
+    <div>
+      <Image
+        width={props.w}
+        height={props.h}
+        src={DockerLogoSrc}
+        alt={"Logo de Docker"}
+      />
+    </div>
+  );
+}
+export function EmprenderLogo(props: LogoPropType) {
+  return (
+    <div>
+      <Image
+        width={props.w}
+        height={props.h}
+        src={emprenderLogoSrc}
+        alt={"Logo de emprendimiento"}
       />
     </div>
   );

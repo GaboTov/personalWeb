@@ -1,5 +1,11 @@
 import {
+  CSSLogo,
+  CienciaLogo,
   DjangoLogo,
+  DockerLogo,
+  EmprenderLogo,
+  HTMLLogo,
+  JsLogo,
   PostSQLLogo,
   PyLogo,
   ReactLogo,
@@ -24,7 +30,7 @@ const ShowLogos = (props: {tec: string[]}) => {
       {props.tec.includes("Django") && (
         <DjangoLogo
           w={30}
-          h={15}
+          h={30}
         />
       )}
       {props.tec.includes("Ts") && (
@@ -38,6 +44,36 @@ const ShowLogos = (props: {tec: string[]}) => {
           w={30}
           h={30}
         />
+      )}
+      {props.tec.includes("HTML") && (
+        <HTMLLogo
+        w={30}
+        h={30}/> 
+      )}
+      {props.tec.includes("CSS") && (
+        <CSSLogo
+        w={30}
+        h={30}/> 
+      )}
+      {props.tec.includes("Js") && (
+        <JsLogo
+        w={30}
+        h={30}/> 
+      )}
+      {props.tec.includes("ciencia") && (
+        <CienciaLogo
+        w={30}
+        h={30}/> 
+      )}
+      {props.tec.includes("Docker") && (
+        <DockerLogo
+        w={32}
+        h={32}/> 
+      )}
+      {props.tec.includes("emprender") && (
+        <EmprenderLogo
+        w={45}
+        h={45}/> 
       )}
     </section>
   );
