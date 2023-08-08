@@ -9,10 +9,8 @@ import JsLogoSrc from "../utilis/images/JavaScript-logo.png";
 import cienciaLogoSrc from "../utilis/images/logoCiencia.png";
 import DockerLogoSrc from "../utilis/images/dockerLogo.webp";
 import emprenderLogoSrc  from "../utilis/images/empredimientoLogo.png"
-interface LogoPropType {
-  h: number;
-  w: number;
-}
+import { LogoPropType } from "@/types/types";
+
 export function ReactLogo(props: LogoPropType) {
   return (
     <div className={`w-[${props.w}px] h-[${props.h}px]`}>

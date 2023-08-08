@@ -17,3 +17,8 @@ export interface FormacionPropsType{
     year:number
     explain:string
 }
+
+export interface LogoPropType {
+    h: number;
+    w: number;
+  }

@@ -37,13 +37,13 @@ export const formacionObjeto = [
     },
     {
       ttl: "Platzi",
-      logo: ["Js", "HTML", "CSS"],
+      logo: ["Js",  "CSS","HTML"],
       year: 2021,
       explain: "Curso de Fronted Developer"
     },
     {
       ttl: "Free Code Camp",
-      logo: ["Js", "HTML", "CSS"],
+      logo: ["Js",  "CSS","HTML"],
       year: 2020,
       explain: "Curso de JavaScript para diseño web y diseño responsive"
     },
