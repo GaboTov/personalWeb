@@ -1,14 +1,11 @@
-
-import FrontPage from '@/components/FrontPage'
-
-
+import FrontPage from "@/components/FrontPage";
+import NavBar from "@/components/NavBar";
 
 export default function Home() {
   return (
-    <main
-      className={` flex min-h-screen flex-col items-center justify-between p-3 pt-10`}
-    >
-      <FrontPage/>
+    <main>
+      <NavBar />
+      <FrontPage />
     </main>
-  )
+  );
 }
