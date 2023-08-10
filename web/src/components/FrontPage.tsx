@@ -4,7 +4,9 @@ import Formaciones from "./Formaciones";
 import Logos from "./Logos";
 const FrontPage = () => {
   return (
-    <>
+    <article
+      className={` flex min-h-screen flex-col items-center justify-between p-3 pt-10`}
+    >
       <section className="flex justify-center flex-col">
         <img
           className={"h-auto w-64 rounded-full py-5 px-5 object-cover"}
@@ -22,7 +24,7 @@ const FrontPage = () => {
       <Experiences />
       <Formaciones />
       <footer className="mt-[500px]">Aca va el footer</footer>
-    </>
+    </article>
   );
 };
 
