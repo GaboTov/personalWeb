@@ -19,11 +19,9 @@ const FrontPage = () => {
         <Logos />
       </section>
 
-      <Experiences/>
-      <Formaciones/> 
-      <footer className="mt-[500px]">
-        Aca va el footer
-      </footer>
+      <Experiences />
+      <Formaciones />
+      <footer className="mt-[500px]">Aca va el footer</footer>
     </>
   );
 };
