@@ -1,23 +1,40 @@
+import { Experience } from "@/components/Expereincie";
 import NavBar from "@/components/NavBar";
-
+import blogEntances from "@/data/blogEntrances";
 const Blog = () => {
   return (
-    <main>
+    <>
       <NavBar />
-      <article>
-        <h1>Titulo</h1>
-        <p>Acá comparto mis pensamiento o experiencias</p>
-      </article>
+      <main className="flex flex-col items-center">
+        <div className="flex flex-col items-center max-w-[1100px]">
+          <div className="bdBlogImage w-[100%] mb-10 text-white px-20 py-10 rounded-[10px] bg-cover bg-center align-center mt-10">
+            <h1 className="text-4xl mb-5 ">
+              Pensamientos mas o menos desarrollados
+            </h1>
+            <p>
+              Un lugar para compartir mis inquietudes, aprendizajes,
+              experiencias y opiniones.
+            </p>
+          </div>
 
-      <article>
-        <ol>
-          <li>Entrada 1</li>
-          <li>Entrada 2</li>
-          <li>Entrada 3</li>
-          <li>Entrada 4</li>
-        </ol>
-      </article>
-    </main>
+          <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 items-center mt-[50px]">
+            {blogEntances.map((entrance) => (
+              <div key={entrance.title}>
+                <Experience
+                  title={entrance.title}
+                  img={entrance.img}
+                  position={entrance.position}
+                  exp={entrance.exp}
+                  tec={entrance.tec}
+                >
+                  {entrance.content}
+                </Experience>
+              </div>
+            ))}
+          </article>
+        </div>
+      </main>
+    </>
   );
 };
 
