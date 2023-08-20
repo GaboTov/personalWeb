@@ -17,7 +17,7 @@ const Blog = () => {
             </p>
           </div>
 
-          <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 items-center mt-[50px]">
+          <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 items-start mt-[50px]">
             {blogEntances.map((entrance) => (
               <div key={entrance.title}>
                 <Experience
@@ -26,6 +26,7 @@ const Blog = () => {
                   position={entrance.position}
                   exp={entrance.exp}
                   tec={entrance.tec}
+                  link={entrance?.link}
                 >
                   {entrance.content}
                 </Experience>

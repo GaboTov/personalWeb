@@ -35,8 +35,8 @@ const Formaciones = () => {
   const moveScroll = (direction: string) => {
     const scrollContainer = scrollContainerRef.current;
     if (scrollContainer) {
-      if (direction === 'right') {
-        scrollContainer.scrollLeft += 350; 
+      if (direction === "right") {
+        scrollContainer.scrollLeft += 350;
       } else {
         scrollContainer.scrollLeft -= 350;
       }
@@ -44,29 +44,35 @@ const Formaciones = () => {
   };
   return (
     <section>
-      <h1>Formación</h1>
+      <h1 className="text-2xl py-10">Formación</h1>
       <div className="flex flex-row">
-        <button className=" mt-[135px] ml-0 bg-slate-400 rounded-full h-8 w-8 text-white hover:scale-125 transition duration-300" onClick={() => moveScroll('left')}>
+        <button
+          className=" mt-[135px] ml-0 bg-slate-400 rounded-full h-8 w-8 text-white hover:scale-125 transition duration-300"
+          onClick={() => moveScroll("left")}
+        >
           {"<"}
         </button>
         <div
           ref={scrollContainerRef}
           className="timeline-wrapper overflow-x-scroll flex gap-10"
         >
-          {formacionObjeto.map((edu:FormacionPropsType)=>{
-            return(
-              <>
-               <Formacion 
+          {formacionObjeto.map((edu: FormacionPropsType, index) => {
+            return (
+              <div key={index}>
+                <Formacion
                   ttl={edu.ttl}
                   logo={edu.logo}
-                  year = {edu.year}
-                  explain = {edu.explain}
-                  /> 
-              </>
-            )
-          } )}
+                  year={edu.year}
+                  explain={edu.explain}
+                />
+              </div>
+            );
+          })}
         </div>
-        <button className=" mr-2 mt-[135px] bg-slate-400 rounded-full h-8 w-8 text-white hover:scale-125 transition duration-300" onClick={() => moveScroll('right')}>
+        <button
+          className=" mr-2 mt-[135px] bg-slate-400 rounded-full h-8 w-8 text-white hover:scale-125 transition duration-300"
+          onClick={() => moveScroll("right")}
+        >
           {">"}
         </button>
       </div>

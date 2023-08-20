@@ -23,7 +23,7 @@ const FrontPage = () => {
 
       <Experiences />
       <Formaciones />
-      <footer className="mt-[500px]">Aca va el footer</footer>
+      <footer className="mt-[2em]">Hecho por Gabo Tovar</footer>
     </article>
   );
 };
