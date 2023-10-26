@@ -17,7 +17,8 @@
   content: "";
   position: absolute;
   top: 152px;
-  width: 340px;
+  width: 100%;
+  min-width: 410px;
   height: 1px;
   background: black;
 }
