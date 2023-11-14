@@ -40,7 +40,7 @@ const ShowLogos = (props: { tec: string[] }) => {
             <LogoComponent
               w={30}
               h={30}
-              key={useId()}
+              key={tech}
             />
           );
         }
