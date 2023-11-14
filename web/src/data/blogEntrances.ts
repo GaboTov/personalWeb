@@ -1,10 +1,30 @@
 import { ExperienceType } from "@/types/types";
-import logoTusesos from "../utilis/images/dockerLogo.webp";
 import reactVsAngalarImg from "@/utilis/images/reactVsAngular.png";
 import devorakImg from "@/utilis/images/devorak.png";
 import testBlog from "@/utilis/images/testBlog.png";
 import tsblog from "@/utilis/images/Tsblog.jpeg";
+import hotPlanet from "@/utilis/images/hotPlanet.webp";
 const blogEntances: ExperienceType[] = [
+  {
+    title: "GitHub Universe Cloud Skills Challenge",
+    img: testBlog,
+    exp: "07/11/2023",
+    tec: ["GitHub"],
+    position: "Desarrollo y tecnolagia",
+    content:
+      "Throughout this challenge, I learned the fundamentals of Git, GitHub, Autopilot, and Azure. Once you understand the basics, you not only use magic but also create it ✨. This challenge gave me a glimpse of the synergy between Azure and OpenAI 🔍. I had the opportunity to develop a web app that utilizes Azure's computer vision to generate image descriptions, and it was impressive 👍",
+    link: "https://www.linkedin.com/posts/gabo-tovar-37b405251_challenge-project-add-image-analysis-and-activity-7127986836190167040-wtqY?utm_source=share&utm_medium=member_desktop",
+  },
+  {
+    title: "🔥🌎La Persona que Calentó el Planeta",
+    img: hotPlanet,
+    exp: "31/10/2023",
+    tec: ["ciencia"],
+    position: "Ciencia",
+    content:
+      "La historia de Thomas Midgley Jr. es un recordatorio poderoso de cómo las decisiones aparentemente inofensivas pueden tener consecuencias devastadoras para nuestro planeta y nuestras vidas. ",
+    link: "https://www.linkedin.com/posts/gabo-tovar-37b405251_medioambiente-saludpaeqblica-contaminaciaejn-activity-7125070780064837633-sI5Z?utm_source=share&utm_medium=member_desktop",
+  },
   {
     title: "Explorando la distribución DVORAK",
     img: devorakImg,

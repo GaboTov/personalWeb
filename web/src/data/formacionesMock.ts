@@ -1,4 +1,11 @@
 export const formacionObjeto = [
+  {ttl: "Microsoft",
+  logo:["GitHub"],
+  year:2023,
+  explain:
+    "GitHub Universe Cloud Skills Challenge",
+  }
+  ,
     {
       ttl: "Factoría de cohesión",
       logo: ["emprender"],

@@ -1,7 +1,7 @@
 import { formacionObjeto } from "@/data/formacionesMock";
 import Formacion from "./Formacion";
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect  } from "react";
 import { FormacionPropsType } from "@/types/types";
 
 const Formaciones = () => {

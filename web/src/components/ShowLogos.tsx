@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 import {
   CSSLogo,
   CienciaLogo,
@@ -11,6 +11,7 @@ import {
   PyLogo,
   ReactLogo,
   TsLogo,
+  LogoGithub,
 } from "./ReactLogo";
 import { LogoPropType } from "@/types/types";
 
@@ -26,15 +27,22 @@ const logoComponents: Record<string, React.FC<LogoPropType>> = {
   ciencia: CienciaLogo,
   Docker: DockerLogo,
   emprender: EmprenderLogo,
+  GitHub: LogoGithub,
 };
 
 const ShowLogos = (props: { tec: string[] }) => {
   return (
-    <section className="flex flex-row space-x-4 justify-end px-6 pb-5">
+    <section className="flex flex-row space-x-4 justify-end px-6 pb-3">
       {props.tec.map((tech) => {
         const LogoComponent = logoComponents[tech];
         if (LogoComponent) {
-          return <LogoComponent w={30} h={30} key={tech} />;
+          return (
+            <LogoComponent
+              w={30}
+              h={30}
+              key={useId()}
+            />
+          );
         }
         return null;
       })}
