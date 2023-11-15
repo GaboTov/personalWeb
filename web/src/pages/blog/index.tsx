@@ -1,9 +1,11 @@
 import { Experience } from "@/components/Expereincie";
+import GameLife from "@/components/GameFile";
 import NavBar from "@/components/NavBar";
 import blogEntances from "@/data/blogEntrances";
 const Blog = () => {
   return (
     <>
+      <GameLife />
       <NavBar />
       <main className="flex flex-col items-center">
         <div className="flex flex-col items-center max-w-[1100px]">

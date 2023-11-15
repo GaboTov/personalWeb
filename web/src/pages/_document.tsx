@@ -1,3 +1,4 @@
+import GameLife from "@/components/GameFile";
 import NavBar from "@/components/NavBar";
 import { Html, Head, Main, NextScript } from "next/document";
 

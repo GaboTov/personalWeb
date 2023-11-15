@@ -60,3 +60,7 @@
 .bdBlogImage {
   background-image: url("https://res.cloudinary.com/dueldzh6k/image/upload/v1691934943/Designer_7_tc1t10.png");
 }
+.gameContainer {
+  position: fixed;
+  z-index: -10;
+}
