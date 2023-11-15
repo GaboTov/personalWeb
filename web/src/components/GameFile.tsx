@@ -18,7 +18,9 @@ export default function GameLife() {
     return board;
   };
 
-  const [board, setBoard] = useState<number[][]>(initialBoard());
+  const [board, setBoard] = useState<number[][]>(
+    calculateNextBoard(initialBoard())
+  );
 
   function drawBoard(ctx: CanvasRenderingContext2D, board: number[][]) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); // Limpiar el canvas
