@@ -1,5 +1,4 @@
 import { ExperienceType } from "@/types/types";
-import Image from "next/image";
 import ShowLogos from "./ShowLogos";
 import Link from "next/link";
 
@@ -20,7 +19,7 @@ export const Experience = ({
           target="_blank"
           className="flex flex-row items-center hover:scale-[1.1] transform transition-transform duration-200"
         >
-          <Image
+          <img
             className={"h-20 w-20 rounded-full py-1 px-1 object-contain"}
             src={img}
             alt="logo de compañía"
@@ -32,7 +31,7 @@ export const Experience = ({
         </Link>
       ) : (
         <div className="flex flex-row items-center">
-          <Image
+          <img
             className={"h-20 w-20 rounded-full py-1 px-1 object-contain"}
             src={img}
             alt="logo de compañía"

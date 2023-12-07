@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 
 export interface ExperienceType {
   title: string;
-  img: StaticImageData;
+  img: string;
   position: string;
   exp: string;
   tec: string[];

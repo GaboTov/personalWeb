@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Client } from '@notionhq/client'
-type ResponseData = {
+type ResponseData = GetData[] | string
+type GetData = {
   title: string
   img: string
 }
@@ -14,21 +15,25 @@ const notionKey = process.env.NOTION_KEY
 const notion = new Client({ auth: notionKey })
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData[]>
+  res: NextApiResponse<ResponseData>
 ) {
+  const allowedOrigin = 'https://personal-web-gabotov.vercel.app';
+  if (req.headers.origin !== allowedOrigin) {
+    return res.status(403).send('Acceso denegado');
+  }
   if (!notionKey || !dataBaseId) throw new Error("Not key or database id")
   const query = { database_id: dataBaseId }
   const getData = await notion.databases.query(query)
-  const results: ResponseData[] = getData.results.map(page => {
+  const results = getData.results.map(page => {
     // @ts-ignore
     const { properties } = page
     const { title, img, exp, tec, position, content, link } = properties
     return {
+      position: position.select.name,
       title: title.title[0].plain_text,
       img: img.files[0].file.url,
       exp: exp.date.start,
       tec: tec.multi_select.map((t: Tec) => (t.name)),
-      position: position.rich_text[0].text.content,
       content: content.rich_text[0].text.content,
       link: link.url
 

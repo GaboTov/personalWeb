@@ -1,8 +1,32 @@
 import { Experience } from "@/components/Expereincie";
 import GameLife from "@/components/GameFile";
 import NavBar from "@/components/NavBar";
-import blogEntances from "@/data/blogEntrances";
-const Blog = () => {
+import { ExperienceType } from "@/types/types";
+import { useEffect, useState } from "react";
+
+export default function Blog() {
+  const getData = async () => {
+    try {
+
+      const res = await fetch('api/notion')
+      const data = await res.json()
+      return data
+    }
+    catch {
+      console.error("Algo salio mal")
+    }
+  }
+  const [blogData, setBlogData] = useState<ExperienceType[]>([])
+  useEffect(() => {
+    getData().then(data => {
+      setBlogData(data)
+    })
+
+  }, [])
+
+
+
+
   return (
     <>
       <GameLife />
@@ -20,7 +44,7 @@ const Blog = () => {
           </div>
 
           <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 items-start mt-[50px]">
-            {blogEntances.map((entrance) => (
+            {blogData?.map((entrance) => (
               <div key={entrance.title}>
                 <Experience
                   title={entrance.title}
@@ -40,5 +64,3 @@ const Blog = () => {
     </>
   );
 };
-
-export default Blog;
