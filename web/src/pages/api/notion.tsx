@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Client } from '@notionhq/client'
+import { ExperienceType } from '@/types/types'
 type ResponseData = GetData[] | string
 type GetData = {
   title: string
@@ -17,14 +18,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
 ) {
-  const allowedOrigin = 'https://personal-web-gabotov.vercel.app';
-  if (req.headers.origin !== allowedOrigin) {
-    return res.status(403).send('Acceso denegado');
-  }
   if (!notionKey || !dataBaseId) throw new Error("Not key or database id")
   const query = { database_id: dataBaseId }
   const getData = await notion.databases.query(query)
-  const results = getData.results.map(page => {
+  const results: ExperienceType[] = getData.results.map(page => {
     // @ts-ignore
     const { properties } = page
     const { title, img, exp, tec, position, content, link } = properties
