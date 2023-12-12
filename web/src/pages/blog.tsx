@@ -2,31 +2,11 @@ import { Experience } from "@/components/Expereincie";
 import GameLife from "@/components/GameFile";
 import NavBar from "@/components/NavBar";
 import { ExperienceType } from "@/types/types";
-import { useEffect, useState } from "react";
-
-export default function Blog() {
-  const getData = async () => {
-    try {
-
-      const res = await fetch('api/notion')
-      const data = await res.json()
-      return data
-    }
-    catch {
-      console.error("Algo salio mal")
-    }
-  }
-  const [blogData, setBlogData] = useState<ExperienceType[]>([])
-  useEffect(() => {
-    getData().then(data => {
-      setBlogData(data)
-    })
-
-  }, [])
-
-
-
-
+import { FC } from "react";
+type PropsBlog = {
+  data: ExperienceType[]
+}
+const Blog: FC<PropsBlog> = ({ data }) => {
   return (
     <>
       <GameLife />
@@ -44,7 +24,7 @@ export default function Blog() {
           </div>
 
           <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 items-start mt-[50px]">
-            {blogData?.map((entrance) => (
+            {data?.map((entrance: ExperienceType) => (
               <div key={entrance.title}>
                 <Experience
                   title={entrance.title}
@@ -64,3 +44,11 @@ export default function Blog() {
     </>
   );
 };
+
+export default Blog;
+
+export async function getServerSideProps() {
+  const res = await fetch('https://personal-web-tawny-alpha.vercel.app/api/notion')
+  const data = await res.json()
+  return { props: { data } }
+}
