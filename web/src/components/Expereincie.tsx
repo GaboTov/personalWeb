@@ -11,6 +11,16 @@ export const Experience = ({
   children,
   link,
 }: ExperienceType) => {
+
+  const correctFormat = (date: string) => {
+    const regx = /\d{4}-\d{2}-\d{2}/;
+    if (!regx.test(date)) {
+      return date;
+    }
+    const [year, month, day] = date.split("-");
+    return `${day}/${month}/${year}`;
+  }
+
   return (
     <div className="flex flex-col w-[290px] flex-wrap mb-20 mr-12">
       {link ? (
@@ -44,7 +54,7 @@ export const Experience = ({
       )}
       <div className="text-[13px] ml-2">
         {position}
-        <p className="text-[11px] h-full">{exp}</p>
+        <p className="text-[11px] h-full">{correctFormat(exp)}</p>
       </div>
       <div className=" text-[15px] bg-gray-100 rounded-md pt-4 pl-1 pr-1 pb-5 h-[400px] ">
         <p className="p-6 mb-5 text-[15px] h-[310px]">{children} </p>

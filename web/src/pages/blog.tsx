@@ -3,17 +3,48 @@ import GameLife from "@/components/GameFile";
 import NavBar from "@/components/NavBar";
 import { ExperienceType } from "@/types/types";
 import { FC } from "react";
-type PropsBlog = {
-  data: ExperienceType[]
+import { useState } from "react";
+
+type DataBlog = {
+  results: ExperienceType[];
+  next_cursor: string
 }
+
+type PropsBlog = {
+  data: DataBlog
+}
+
 const Blog: FC<PropsBlog> = ({ data }) => {
+
+  const [entrances, setEntrances] = useState<ExperienceType[]>(data.results)
+  const [nextCursor, setNextCursor] = useState<string>(data.next_cursor)
+  const [loading, setLoading] = useState<boolean>(false)
+  const loadMore = async () => {
+    setLoading(true)
+    if (nextCursor) {
+      try {
+        const url = `api/notion${nextCursor ? `?startCursor=${nextCursor}` : ''}`;
+        const res = await fetch(url);
+        const data = await res.json();
+        if (!!data) {
+
+          setEntrances([...entrances, ...data.results]);
+          setNextCursor(data.next_cursor);
+          setLoading(false)
+        }
+      } catch (error) {
+        console.error("Bad request", error);
+      }
+    }
+  };
+
   return (
     <>
       <GameLife />
       <NavBar />
       <main className="flex flex-col items-center">
-        <div className="flex flex-col items-center max-w-[1100px]">
-          <div className="bdBlogImage w-[100%] mb-10 text-white px-20 py-10 rounded-[10px] bg-cover bg-center align-center mt-10">
+        <div className="flex flex-col items-center max-w-[1100px] mt-[100px]">
+          <div className="bdBlogImage w-[100%] mb-16 text-white px-20 py-10 rounded-[10px] bg-cover bg-center align-center mt-10">
             <h1 className="text-4xl mb-5 ">
               Pensamientos mas o menos desarrollados
             </h1>
@@ -24,7 +55,7 @@ const Blog: FC<PropsBlog> = ({ data }) => {
           </div>
 
           <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 items-start mt-[50px]">
-            {data?.map((entrance: ExperienceType) => (
+            {entrances?.map((entrance: ExperienceType) => (
               <div key={entrance.title}>
                 <Experience
                   title={entrance.title}
@@ -39,6 +70,11 @@ const Blog: FC<PropsBlog> = ({ data }) => {
               </div>
             ))}
           </article>
+          {!!nextCursor && (
+            <button onClick={() => loadMore()} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-5 rounded">
+              {!loading ? "Mas..." : "Cargando ..."}
+            </button>
+          )}
         </div>
       </main>
     </>
