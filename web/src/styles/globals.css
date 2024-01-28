@@ -13,26 +13,22 @@
   align-items: center;
   padding: 2rem;
 }
-.timeline-item:before {
-  content: "";
-  position: absolute;
-  top: 152px;
-  width: 100%;
-  min-width: 410px;
-  height: 1px;
-  background: black;
-}
+/* .timeline-item:before { */
+/*   content: ""; */
+/*   position: absolute; */
+/*   top: 160px; */
+/*   width: 100%; */
+/*   min-width: 410px; */
+/*   height: 1px; */
+/*   background: black; */
+/* } */
 
 .point {
-  /* Estiliza tu punto de la línea de tiempo como prefieras */
-
-  /* Asegúrate de que hay espacio entre el punto y el contenido */
   z-index: 1;
 }
 
 .content {
   padding: 1.3em;
-  /* Aquí puedes estilizar tu contenido como quieras */
   @apply text-[20px];
 }
 .yearStudy {

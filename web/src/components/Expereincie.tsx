@@ -56,7 +56,7 @@ export const Experience = ({
         {position}
         <p className="text-[11px] h-full">{correctFormat(exp)}</p>
       </div>
-      <div className=" text-[15px] bg-gray-100 rounded-md pt-4 pl-1 pr-1 pb-5 h-[400px] dark:bg-[#1a202c]">
+      <div className=" text-[15px] bg-gray-100 rounded-md pt-4 pl-1 pr-1 pb-5 h-[400px] dark:bg-[#323741ed]">
 
         <p className="p-6 mb-5 text-[15px] h-[310px]">
           {children}

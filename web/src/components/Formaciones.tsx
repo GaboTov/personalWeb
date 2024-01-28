@@ -1,7 +1,7 @@
 import { formacionObjeto } from "@/data/formacionesMock";
 import Formacion from "./Formacion";
 
-import React, { useRef, useEffect  } from "react";
+import React, { useRef, useEffect } from "react";
 import { FormacionPropsType } from "@/types/types";
 
 const Formaciones = () => {
@@ -17,7 +17,7 @@ const Formaciones = () => {
         if (
           e.deltaY > 0 &&
           scrollContainer.scrollLeft <
-            scrollContainer.scrollWidth - scrollContainer.clientWidth
+          scrollContainer.scrollWidth - scrollContainer.clientWidth
         ) {
           scrollContainer.scrollLeft += e.deltaY;
         } else if (e.deltaY < 0 && scrollContainer.scrollLeft > 0) {
@@ -47,7 +47,7 @@ const Formaciones = () => {
       <h1 className="text-2xl py-10">Formación</h1>
       <div className="flex flex-row">
         <button
-          className=" mt-[135px] ml-0 bg-slate-400 rounded-full h-8 w-8 text-white hover:scale-125 transition duration-300"
+          className=" mt-[230px] ml-0 bg-slate-400 rounded-full h-8 w-8 text-white hover:scale-125 transition duration-300"
           onClick={() => moveScroll("left")}
         >
           {"<"}
@@ -70,7 +70,7 @@ const Formaciones = () => {
           })}
         </div>
         <button
-          className=" mr-2 mt-[135px] bg-slate-400 rounded-full h-8 w-8 text-white hover:scale-125 transition duration-300"
+          className=" mr-2 mt-[230px] bg-slate-400 rounded-full h-8 w-8 text-white hover:scale-125 transition duration-300"
           onClick={() => moveScroll("right")}
         >
           {">"}

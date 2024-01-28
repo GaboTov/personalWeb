@@ -30,7 +30,7 @@ const logoComponents: Record<string, React.FC<LogoPropType>> = {
   GitHub: LogoGithub,
 };
 
-const ShowLogos = (props: { tec: string[] }) => {
+const ShowLogos = (props: { tec: string[], w?: number }) => {
   return (
     <section className="flex flex-row space-x-4 justify-end px-6 pb-3">
       {props.tec.map((tech) => {
@@ -38,8 +38,8 @@ const ShowLogos = (props: { tec: string[] }) => {
         if (LogoComponent) {
           return (
             <LogoComponent
-              w={30}
-              h={30}
+              w={props.w ?? 30}
+              h={props.w ?? 30}
               key={tech}
             />
           );
