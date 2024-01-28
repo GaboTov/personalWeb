@@ -3,7 +3,7 @@ import NavBar from "@/components/NavBar";
 import GameLife from "@/components/GameFile";
 export default function Home() {
   return (
-    <main>
+    <main className="dark:bg-[#3d3d3dd1]">
       <GameLife />
       <NavBar />
       <FrontPage />

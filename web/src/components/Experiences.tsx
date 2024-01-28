@@ -1,11 +1,11 @@
 import { Experience } from "./Expereincie"
-
 const Experiences = () => {
 
-  const logoTudesos = "https://res.cloudinary.com/dueldzh6k/image/upload/v1701856345/logoTudesos_ysje8q.jpg"
-  const logoSostenibilidadMedida = "https://res.cloudinary.com/dueldzh6k/image/upload/v1701856502/sosLogo_ujup2k.jpg"
+  const logoTudesos = "https://res.cloudinary.com/dueldzh6k/image/upload/v1706469696/tudesosLogo_vaq7po.png"
+  const logoSostenibilidadMedida = "https://res.cloudinary.com/dueldzh6k/image/upload/v1706469970/sosLogo_ujup2k-removebg-preview_gcqqct.png"
   const logoUni = "https://res.cloudinary.com/dueldzh6k/image/upload/v1701856667/uniLogo_veqka2.png"
-  const logoCocophere = "https://res.cloudinary.com/dueldzh6k/image/upload/v1701936821/cocosphere_vizax0.jpg"
+  const logoCocophere = "https://res.cloudinary.com/dueldzh6k/image/upload/v1706469999/cocosphere_vizax0-removebg-preview_zwarlo.png"
+
   return (
     <section className="flex-column w-auto">
       <div>

@@ -27,10 +27,10 @@ export const Experience = ({
         <Link
           href={link}
           target="_blank"
-          className="flex flex-row items-center hover:scale-[1.1] transform transition-transform duration-200"
+          className="flex flex-row items-center hover:scale-[1.1] transform transition-transform duration-200 bg-transparent"
         >
           <img
-            className={"h-20 w-20 rounded-full py-1 px-1 object-contain"}
+            className={"h-20 w-20 rounded-full py-1 px-1 object-contain bg-transparent"}
             src={img}
             alt="logo de compañía"
           />
@@ -42,7 +42,7 @@ export const Experience = ({
       ) : (
         <div className="flex flex-row items-center">
           <img
-            className={"h-20 w-20 rounded-full py-1 px-1 object-contain"}
+            className={"h-20 w-20 rounded-full py-1 px-1 object-contain bg-transparent"}
             src={img}
             alt="logo de compañía"
           />
@@ -56,8 +56,11 @@ export const Experience = ({
         {position}
         <p className="text-[11px] h-full">{correctFormat(exp)}</p>
       </div>
-      <div className=" text-[15px] bg-gray-100 rounded-md pt-4 pl-1 pr-1 pb-5 h-[400px] ">
-        <p className="p-6 mb-5 text-[15px] h-[310px]">{children} </p>
+      <div className=" text-[15px] bg-gray-100 rounded-md pt-4 pl-1 pr-1 pb-5 h-[400px] dark:bg-[#1a202c]">
+
+        <p className="p-6 mb-5 text-[15px] h-[310px]">
+          {children}
+        </p>
         <ShowLogos tec={tec} />
       </div>
     </div>

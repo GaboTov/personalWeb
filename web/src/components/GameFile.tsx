@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 export default function GameLife() {
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const boardRef = useRef<number[][]>();
   const cellSize = 50; // Tamaño de cada celda en píxeles
