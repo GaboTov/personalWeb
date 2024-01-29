@@ -6,7 +6,7 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed w-[100%] h-[60px] mb-8 bg-[#9cacc9ed] align-middle rounded" >
+    <nav className="fixed w-[100%] h-[60px] mb-8 bg-transparent align-middle rounded" >
       <ol className={`flex flex-row justify-end mr-8 p-4 `}>
         <li>
 
