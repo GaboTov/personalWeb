@@ -12,6 +12,7 @@ import {
   ReactLogo,
   TsLogo,
   LogoGithub,
+  LinuxLogo
 } from "./ReactLogo";
 import { LogoPropType } from "@/types/types";
 
@@ -28,6 +29,7 @@ const logoComponents: Record<string, React.FC<LogoPropType>> = {
   Docker: DockerLogo,
   emprender: EmprenderLogo,
   GitHub: LogoGithub,
+  linux: LinuxLogo,
 };
 
 const ShowLogos = (props: { tec: string[], w?: number }) => {

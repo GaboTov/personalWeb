@@ -9,8 +9,21 @@ import JsLogoSrc from "../utilis/images/JavaScript-logo.png";
 import cienciaLogoSrc from "../utilis/images/logoCiencia.png";
 import DockerLogoSrc from "../utilis/images/dockerLogo.webp";
 import emprenderLogoSrc from "../utilis/images/empredimientoLogo.png";
+import LogoLinux from "../utilis/images/logo-linux.webp";
 import { LogoPropType } from "@/types/types";
 
+export function LinuxLogo(props: LogoPropType) {
+  return (
+    <div className={`max-w-[${props.w}px] max-h-[${props.h}px]`}>
+      <Image
+        width={props.w}
+        height={props.h}
+        src={LogoLinux}
+        alt="logo de Linux"
+      />
+    </div>
+  )
+}
 export function ReactLogo(props: LogoPropType) {
   return (
     <div className={`w-[${props.w}px] h-[${props.h}px]`}>
@@ -47,7 +60,7 @@ export function ReactLogo(props: LogoPropType) {
           ></ellipse>
         </g>
       </svg>
-    </div>
+    </div >
   );
 }
 
@@ -182,7 +195,7 @@ export const LogoGithub = () => {
     <svg
       viewBox="0 0 24 24"
       aria-hidden="false"
-      className="h-[28px] w-auto fill-slate-900"
+      className="h-[38px] w-auto fill-slate-900"
     >
       <path
         fillRule="evenodd"

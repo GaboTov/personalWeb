@@ -13,7 +13,7 @@ const Formacion = ({ logo, ttl, mt, year, explain }: FormacionPropsType) => {
           className={` bg-transparent  rounded-full p-8 h-[140px]`}
 
         >
-          <ShowLogos tec={logo} w={43} />
+          <ShowLogos tec={logo} />
         </div>
         <div className="text-center mb-2">
           <h1 className="yearStudy">{year}</h1>

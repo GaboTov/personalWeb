@@ -28,12 +28,13 @@
 }
 
 .content {
-  padding: 1.3em;
-  @apply text-[20px];
+  padding: 1.3em
+  @apply text-[20px]
 }
 .yearStudy {
   @apply m-3
-    text-gray-400;
+    text-gray-600
+    dark:text-white
 }
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
